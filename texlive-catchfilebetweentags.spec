@@ -1,3 +1,9 @@
+# revision 21476
+# category Package
+# catalog-ctan /macros/latex/contrib/catchfilebetweentags
+# catalog-date 2011-02-19 16:41:47 +0100
+# catalog-license lppl1.3
+# catalog-version 1.1
 Name:		texlive-catchfilebetweentags
 Version:	1.1
 Release:	1
@@ -48,6 +54,7 @@ region may be included or dropped).
 %doc %{_texmfdistdir}/source/latex/catchfilebetweentags/catchfilebetweentags.drv
 %doc %{_texmfdistdir}/source/latex/catchfilebetweentags/catchfilebetweentags.dtx
 %doc %{_texmfdistdir}/source/latex/catchfilebetweentags/catchfilebetweentags.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +65,5 @@ region may be included or dropped).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
