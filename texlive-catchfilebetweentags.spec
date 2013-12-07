@@ -6,7 +6,7 @@
 # catalog-version 1.1
 Name:		texlive-catchfilebetweentags
 Version:	1.1
-Release:	2
+Release:	3
 Summary:	Catch text delimited by docstrip tags
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/catchfilebetweentags
