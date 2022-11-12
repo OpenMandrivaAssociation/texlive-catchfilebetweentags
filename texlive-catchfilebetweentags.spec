@@ -1,19 +1,13 @@
-# revision 21476
-# category Package
-# catalog-ctan /macros/latex/contrib/catchfilebetweentags
-# catalog-date 2011-02-19 16:41:47 +0100
-# catalog-license lppl1.3
-# catalog-version 1.1
 Name:		texlive-catchfilebetweentags
-Version:	1.1
-Release:	11
+Version:	21476
+Release:	1
 Summary:	Catch text delimited by docstrip tags
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/catchfilebetweentags
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/catchfilebetweentags.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/catchfilebetweentags.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/catchfilebetweentags.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/catchfilebetweentags.r21476.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/catchfilebetweentags.doc.r21476.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/catchfilebetweentags.source.r21476.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ docstrip tags: %<*tag> .... %</tag> (comments in the caught
 region may be included or dropped).
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -47,25 +41,11 @@ region may be included or dropped).
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.1-2
-+ Revision: 749990
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.1-1
-+ Revision: 718012
-- texlive-catchfilebetweentags
-- texlive-catchfilebetweentags
-- texlive-catchfilebetweentags
-- texlive-catchfilebetweentags
-- texlive-catchfilebetweentags
-
