@@ -1,6 +1,6 @@
 Name:		texlive-catchfilebetweentags
 Version:	21476
-Release:	1
+Release:	2
 Summary:	Catch text delimited by docstrip tags
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/catchfilebetweentags
